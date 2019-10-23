@@ -1,4 +1,5 @@
 .cdx-marker {
-  background: rgba(245,235,111,0.29);
-  padding: 3px 0;
+  background: linear-gradient(180deg, transparent 48%, rgb(255, 252, 184) 0);
+  padding: 0;
+  padding-bottom: 2px;
 }

@@ -1,6 +1,6 @@
 {
-  "name": "@editorjs/marker",
-  "version": "1.2.1",
+  "name": "@groupher/editor-marker",
+  "version": "1.0.1",
   "keywords": [
     "codex editor",
     "marker",
@@ -10,7 +10,7 @@
   ],
   "description": "Marker Tool for Editor.js",
   "license": "MIT",
-  "repository": "https://github.com/editor-js/marker",
+  "repository": "https://github.com/groupher/editor-marker",
   "main": "./dist/bundle.js",
   "scripts": {
     "build": "webpack --mode production",
