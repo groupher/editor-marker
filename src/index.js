@@ -21,7 +21,7 @@ class Marker {
   /**
    * @param {{api: object}}  - Editor.js API
    */
-  constructor({api}) {
+  constructor({ api }) {
     this.api = api;
 
     /**
@@ -54,6 +54,22 @@ class Marker {
    */
   static get isInline() {
     return true;
+  }
+
+  /**
+   * Get Tool icon's title
+   * @return {string}
+   */
+  static get title() {
+    return "高亮";
+  }
+
+  /**
+   * Get Tool icon's SVG
+   * @return {string}
+   */
+  get toolboxIcon() {
+    return '<svg width="18" height="18" t="1575272257090" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9406" width="200" height="200"><path d="M321.85 842.47l-70.76 70.46a8 8 0 0 1-9.72 1.22L94.1 827a8 8 0 0 1-2.81-11 7.89 7.89 0 0 1 1.23-1.58L193.18 713.8 167.37 688a32 32 0 0 1 0-45.26l123.17-123.17a32 32 0 0 0 9-17.71l27.75-178.38a32 32 0 0 1 9-17.71l202.06-202.08a32 32 0 0 1 45.26 0l355 355.06a32 32 0 0 1 0 45.26l-202 202a32 32 0 0 1-17.77 9l-178.63 27.51a32 32 0 0 0-17.76 9L399.3 874.66a32 32 0 0 1-45.25 0zM521.57 228L400.21 349.38l-31 199-117 117 124.47 124.36 117-117L693 642.09l120.42-120.38z" p-id="9407"></path></svg>'
   }
 
   /**
@@ -160,14 +176,6 @@ class Marker {
     const termTag = this.api.selection.findParentTag(this.tag, Marker.CSS);
 
     this.button.classList.toggle(this.iconClasses.active, !!termTag);
-  }
-
-  /**
-   * Get Tool icon's SVG
-   * @return {string}
-   */
-  get toolboxIcon() {
-    return '<svg width="26" height="26" t="1571796580791" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="18924" width="200" height="200"><path d="M270.043 523.639h550.242v65.614h-262.945v88.114h44.88v163.688h-131.745v-163.688h44.872v-88.114h-310.927v-347.385h65.623z" p-id="18925"></path><path d="M345.19 241.868h475.095v197.831h-475.095v-197.831z" p-id="18926"></path></svg>';
   }
 
   /**
