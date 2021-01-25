@@ -1,7 +1,7 @@
 /**
  * Build styles
  */
-require('./index.css').toString();
+require("./index.css").toString();
 
 /**
  * Marker Tool for the Editor.js
@@ -15,8 +15,8 @@ class Marker {
    * @type {string}
    */
   static get CSS() {
-    return 'cdx-marker';
-  };
+    return "cdx-marker";
+  }
 
   /**
    * @param {{api: object}}  - Editor.js API
@@ -36,14 +36,14 @@ class Marker {
      *
      * @type {string}
      */
-    this.tag = 'MARK';
+    this.tag = "MARK";
 
     /**
      * CSS classes
      */
     this.iconClasses = {
       base: this.api.styles.inlineToolButton,
-      active: this.api.styles.inlineToolButtonActive
+      active: this.api.styles.inlineToolButtonActive,
     };
   }
 
@@ -69,7 +69,7 @@ class Marker {
    * @return {string}
    */
   get toolboxIcon() {
-    return '<svg width="18" height="18" t="1575272257090" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9406" width="200" height="200"><path d="M321.85 842.47l-70.76 70.46a8 8 0 0 1-9.72 1.22L94.1 827a8 8 0 0 1-2.81-11 7.89 7.89 0 0 1 1.23-1.58L193.18 713.8 167.37 688a32 32 0 0 1 0-45.26l123.17-123.17a32 32 0 0 0 9-17.71l27.75-178.38a32 32 0 0 1 9-17.71l202.06-202.08a32 32 0 0 1 45.26 0l355 355.06a32 32 0 0 1 0 45.26l-202 202a32 32 0 0 1-17.77 9l-178.63 27.51a32 32 0 0 0-17.76 9L399.3 874.66a32 32 0 0 1-45.25 0zM521.57 228L400.21 349.38l-31 199-117 117 124.47 124.36 117-117L693 642.09l120.42-120.38z" p-id="9407"></path></svg>'
+    return '<svg width="16" height="16" t="1575272257090" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9406" width="200" height="200"><path d="M321.85 842.47l-70.76 70.46a8 8 0 0 1-9.72 1.22L94.1 827a8 8 0 0 1-2.81-11 7.89 7.89 0 0 1 1.23-1.58L193.18 713.8 167.37 688a32 32 0 0 1 0-45.26l123.17-123.17a32 32 0 0 0 9-17.71l27.75-178.38a32 32 0 0 1 9-17.71l202.06-202.08a32 32 0 0 1 45.26 0l355 355.06a32 32 0 0 1 0 45.26l-202 202a32 32 0 0 1-17.77 9l-178.63 27.51a32 32 0 0 0-17.76 9L399.3 874.66a32 32 0 0 1-45.25 0zM521.57 228L400.21 349.38l-31 199-117 117 124.47 124.36 117-117L693 642.09l120.42-120.38z" p-id="9407"></path></svg>';
   }
 
   /**
@@ -78,8 +78,8 @@ class Marker {
    * @return {HTMLElement}
    */
   render() {
-    this.button = document.createElement('button');
-    this.button.type = 'button';
+    this.button = document.createElement("button");
+    this.button.type = "button";
     this.button.classList.add(this.iconClasses.base);
     this.button.innerHTML = this.toolboxIcon;
 
@@ -185,8 +185,8 @@ class Marker {
   static get sanitize() {
     return {
       mark: {
-        class: Marker.CSS
-      }
+        class: Marker.CSS,
+      },
     };
   }
 }
